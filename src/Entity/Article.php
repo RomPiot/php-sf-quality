@@ -37,7 +37,7 @@ class Article
         return $this->id;
     }
 
-    public function getTitle(): ?string
+    public function getTitle()
     {
         return $this->title;
     }
@@ -54,7 +54,7 @@ class Article
         return $this->content;
     }
 
-    public function setContent(?string $content): self
+    public function setContent($content): self
     {
         $this->content = $content;
 
