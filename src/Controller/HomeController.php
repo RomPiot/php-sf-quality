@@ -20,6 +20,16 @@ class HomeController extends AbstractController
 
         ]);
     }
+
+    /**
+     * 
+     * @param string $number 
+     * @return int 
+     */
+    private function test(int $number)
+    {
+        return $number;
+    }
 }
               
   

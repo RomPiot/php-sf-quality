@@ -9,3 +9,6 @@ csfix:
 
 stan:
 	vendor/bin/phpstan analyse --ansi --no-progress --error-format=table
+
+psalm:
+	./vendor/bin/psalm -c=./psalm.xml
