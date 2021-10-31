@@ -16,13 +16,13 @@
     <file>tests/</file>
 
     <rule ref="PEAR">
-        <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore" />
+        <!-- <exclude name="PEAR.NamingConventions.ValidVariableName.PrivateNoUnderscore" />
         <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment" />
         <exclude name="PEAR.Commenting.ClassComment.Missing" />
         <exclude name="PEAR.Commenting.FileComment.Missing" />
         <exclude name="PEAR.Classes.ClassDeclaration.OpenBraceNotAlone" />
         <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNotAlone" />
-        <exclude name="Generic.Commenting.DocComment.MissingShort" />
+        <exclude name="Generic.Commenting.DocComment.MissingShort" /> -->
 
         <!-- <exclude name="PEAR.NamingConventions.ValidFunctionName.ScopeNotCamelCaps" />
         <exclude name="PEAR.NamingConventions.ValidFunctionName.NotCamelCaps" />

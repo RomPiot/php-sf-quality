@@ -5,10 +5,7 @@ cs:
 	./vendor/bin/phpcs ./src -p -s -v --colors --no-cache
 
 csfix:
-	./vendor/bin/phpcbf --no-cache
-
-csfixer:
-	vendor/bin/php-cs-fixer fix
+	./vendor/bin/phpcbf ./src --no-cache
 
 stan:
 	vendor/bin/phpstan analyse --ansi --no-progress --error-format=table
