@@ -1,14 +1,14 @@
-SFC = symfony console
-
-
-test: 
-	composer -v
-
 start:
 	symfony serve
 	
-phpcs:
+cs:
 	./vendor/bin/phpcs ./src -p -s -v --colors --no-cache
 
+csfix:
+	./vendor/bin/phpcbf --no-cache
+
+csfixer:
+	vendor/bin/php-cs-fixer fix
+
 stan:
-	vendor/bin/phpstan analyse --standard=./phpcs.xml.dist --ansi --no-progress --error-format=table
+	vendor/bin/phpstan analyse --ansi --no-progress --error-format=table
