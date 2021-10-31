@@ -10,8 +10,12 @@ class HomeController extends AbstractController
     {
 
         $vartest = "coucou";
-        return $this->render('home/index.html.twig', [
-        'controller_name' => $vartest,
+        return $this->render('home/index.html.twig', ['controller_name' => $vartest,
+            'azerf' => $vartest,'controlleferzr_name' => $vartest,
+        'ezefff' => $vartest,
+        
+        
+        'azdzada' => $vartest,
 
 
         ]);
