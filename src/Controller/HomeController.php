@@ -28,8 +28,29 @@ class HomeController extends AbstractController
      */
     private function test(int $number)
     {
-        return $number;
+        $aaa = 'coucou';
+        $bbb = 'yoooo bb';
+
+        $ccc = $number + $aaa;
+
+        return $ccc;
     }
+
+ /**
+     * 
+     * @param string $number 
+     * @return int 
+     */
+    private function test2(int $number)
+    {
+        $aaa = 'coucou';
+        $bbb = 'yoooo bb';
+
+        $ccc = $number + $aaa;
+
+        return $ccc;
+    }
+
 }
               
   
