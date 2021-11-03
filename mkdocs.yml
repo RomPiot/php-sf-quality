@@ -1,1 +1,8 @@
 site_name: My Docs
+theme: 
+  name: readthedocs
+
+plugins:
+  - search
+  - include:
+      src_path: .
