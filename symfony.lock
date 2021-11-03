@@ -1,4 +1,13 @@
 {
+    "behat/behat": {
+        "version": "v3.10.0"
+    },
+    "behat/gherkin": {
+        "version": "v4.9.0"
+    },
+    "behat/transliterator": {
+        "version": "v1.3.0"
+    },
     "bmitch/churn-php": {
         "version": "1.5.0"
     },

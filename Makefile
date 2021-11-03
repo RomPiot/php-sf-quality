@@ -23,17 +23,20 @@ ins:
 	./vendor/bin/phpinsights
 
 deptrac:
-	vendor/bin/deptrac analyse depfile.yaml --no-cache
+	./vendor/bin/deptrac analyse depfile.yaml --no-cache
 
 dep-uml:
-	vendor/bin/dephpend uml --output=uml.png ./src
+	./vendor/bin/dephpend uml --output=uml.png ./src
 
 dep-dsm:
-	vendor/bin/dephpend dsm ./src > dependencies.html
+	./vendor/bin/dephpend dsm ./src > dependencies.html
 
 dep-metrics:
-	vendor/bin/dephpend metrics ./src
+	./vendor/bin/dephpend metrics ./src
 
 metrics:
-	vendor/bin/phpmetrics --report-html="./report" ./src
+	./vendor/bin/phpmetrics --report-html="./report" ./src
+	
+behat:
+	./vendor/bin/behat --snippets-for
 	
