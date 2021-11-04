@@ -7,5 +7,9 @@ Install mkdocs:
 Allow include content file:
 `https://github.com/RedisLabs/mkdocs-include`
 
+Show docs locally
+`mkdocs serve`
+
 Generate Github Page :
-`mkdocs gh-deploy7`
+- `mkdocs build`
+- `mkdocs gh-deploy`

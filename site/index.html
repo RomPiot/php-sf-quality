@@ -53,6 +53,8 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
     </li>
+    <li class="toctree-l2"><a class="reference internal" href="#test-includes-file-content">Test includes file content</a>
+    </li>
     </ul>
                     </li>
                 </ul>
@@ -104,6 +106,44 @@ docs/
     index.md  # The documentation homepage.
     ...       # Other markdown pages, images and other files.
 </code></pre>
+<h2 id="test-includes-file-content">Test includes file content</h2>
+<p>Feature: Cart products
+    In order to buy products
+    As a customer
+    I need to be able to put interesting products into a cart</p>
+<pre><code>Rules:
+- VAT is 20%
+- Delivery for cart under 10.00 € is 3.00 €
+- Delivery for cart over 10.00 € is 2.00 €
+
+Scenario: Buying a single product under 10.00 €
+    Given there is a "Apple 10", which costs 5.00 €
+    When I add the "Apple 10" to the cart
+    Then I should have 1 product in the cart
+    And the overall cart price should be 9.00 €
+
+Scenario: Buying a single product over 10.00 €
+    Given there is a "Apple 10", which costs 15.00 €
+    When I add the "Apple 10" to the cart
+    Then I should have 1 product in the cart
+    And the overall cart price should be 20.00 €
+
+Scenario: Buying two products under 10.00 €
+    Given there is a "Apple 10", which costs 3.00 €
+    And there is a "Samsung Galaxy S11", which costs 2.00 €
+    When I add the "Apple 10" to the cart
+    And I add the "Samsung Galaxy S11" to the cart
+    Then I should have 2 products in the cart
+    And the overall cart price should be 9.00 €
+
+Scenario: Buying two products over 10.00 €
+    Given there is a "Apple 10", which costs 10.00 €
+    And there is a "Samsung Galaxy S11", which costs 5.00 €
+    When I add the "Apple 10" to the cart
+    And I add the "Samsung Galaxy S11" to the cart
+    Then I should have 2 products in the cart
+    And the overall cart price should be 20.00 €
+</code></pre>
               
             </div>
           </div>
@@ -149,5 +189,5 @@ docs/
 
 <!--
 MkDocs version : 1.2.3
-Build Date UTC : 2021-11-03 23:21:00.735947+00:00
+Build Date UTC : 2021-11-04 19:50:20.727693+00:00
 -->
