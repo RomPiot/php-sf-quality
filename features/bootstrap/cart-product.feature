@@ -1,3 +1,4 @@
+@cart
 Feature: Cart products
     In order to buy products
     As a customer

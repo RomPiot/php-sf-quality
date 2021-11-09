@@ -107,7 +107,8 @@ docs/
     ...       # Other markdown pages, images and other files.
 </code></pre>
 <h2 id="test-includes-file-content">Test includes file content</h2>
-<p>Feature: Cart products
+<p>@cart
+Feature: Cart products
     In order to buy products
     As a customer
     I need to be able to put interesting products into a cart</p>
@@ -143,6 +144,32 @@ Scenario: Buying two products over 10.00 €
     And I add the "Samsung Galaxy S11" to the cart
     Then I should have 2 products in the cart
     And the overall cart price should be 20.00 €
+
+Scenario Outline: Buying a single product over and under 10.00 €
+    Given there is a &lt;product&gt;, which costs &lt;costs&gt; €
+    When I add the &lt;product&gt; to the cart
+    Then I should have 1 products in the cart
+    And the overall cart price should be &lt;total&gt; €
+
+    Examples:
+        | product  | costs | total |
+        | Product1 | 10.00 | 14.00 |
+        | Product2 | 5.00  | 9.00  |
+        | Product3 | 15.00 | 20.00 |
+
+Scenario Outline: Buying two products over and under 10.00 €
+    Given there is a &lt;product&gt;, which costs &lt;costs&gt; €
+    And there is a &lt;product2&gt;, which costs &lt;costs2&gt; €
+    When I add the &lt;product&gt; to the cart
+    And I add the &lt;product2&gt; to the cart
+    Then I should have 2 products in the cart
+    And the overall cart price should be &lt;total&gt; €
+
+    Examples:
+        | product  | costs | product2 | costs2 | total |
+        | Product1 | 10.00 | Product2 | 5.00   | 20.00 |
+        | Product3 | 3.00  | Product4 | 2.00   | 9.00  |
+        | Product5 | 12.00 | Product6 | 8.00   | 26.00 |
 </code></pre>
               
             </div>
@@ -189,5 +216,5 @@ Scenario: Buying two products over 10.00 €
 
 <!--
 MkDocs version : 1.2.3
-Build Date UTC : 2021-11-04 19:50:20.727693+00:00
+Build Date UTC : 2021-11-09 18:26:08.262607+00:00
 -->

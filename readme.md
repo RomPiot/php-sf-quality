@@ -1,6 +1,3 @@
-Swith php version :
-`sudo update-alternatives --set php /usr/bin/php7.4`
-
 Install mkdocs:
 `sudo pip install mkdocs`
 
@@ -13,3 +10,6 @@ Show docs locally
 Generate Github Page :
 - `mkdocs build`
 - `mkdocs gh-deploy`
+
+Swith php version :
+`sudo update-alternatives --set php /usr/bin/php7.4`

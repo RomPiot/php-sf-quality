@@ -38,5 +38,5 @@ metrics:
 	./vendor/bin/phpmetrics --report-html="./report" ./src
 	
 behat:
-	./vendor/bin/behat --snippets-for
+	./vendor/bin/behat --snippets-for --colors
 	

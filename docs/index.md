@@ -19,4 +19,4 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Test includes file content
 
-{{ include('features/bootstrap/buy-product.feature') }}
+{{ include('features/bootstrap/cart-product.feature') }}
